@@ -1,0 +1,38 @@
+.container {
+    ul{
+        list-style: none;
+        li {
+            border: 1px solid blueviolet;
+            img{
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+            .content {
+                padding: 0.5rem 1rem;
+                .title {
+                    .name {
+                        font-size: 1.2rem;
+                        width: 100px;
+                        &:hover{
+                            cursor: pointer;
+                        }
+                    }
+                    .favourite {
+                        color: red;
+                        font-size: 1.5rem;
+                        &:hover{
+                            cursor: pointer;
+                        }
+                    }
+                    .favouritenot {
+                        font-size: 1.5rem;
+                        &:hover{
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

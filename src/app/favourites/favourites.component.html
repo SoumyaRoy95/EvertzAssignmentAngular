@@ -1,0 +1,17 @@
+<h3>Favourites</h3>
+<div class="container">
+    <ul *ngFor="let movie of list | async">
+        <li>
+            <img routerLink="/movie/{{movie.id}}" [src]="movie.imageUrl" [alt]="movie.title" width="150" height="150" />
+            <div class="content">
+                <div class="title">
+                    <span routerLink="/movie/{{movie.id}}" class="name">{{movie.title}}</span>
+                    <span class="favourite{{movie.favourite? '': 'not'}}">♥</span>
+                </div>
+                <div class="genre">
+                    <span>{{movie.genre}}</span>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

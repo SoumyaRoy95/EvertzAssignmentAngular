@@ -1,0 +1,12 @@
+<div>
+    <mat-form-field>
+        <mat-label>Genre</mat-label>
+        <select matNativeControl [(ngModel)]="genres" [value]="genres">
+            <option value="crime">Crime</option>
+            <option value="drama">Drama</option>
+            <option value="action">Action</option>
+        </select>
+    </mat-form-field>  
+    <button color="accent" mat-raised-button (click)="filterOut(genres)">Filter</button>
+</div>
+

@@ -1,0 +1,6 @@
+[
+    {"id": 1, "imageUrl":"goodfellas.jpg", "title": "Goodfellas", "genre": "Crime", "director": "Martin Scorcese", "favourite": false},
+    {"id": 2, "imageUrl":"Casino_poster.jpg", "title": "Casino", "genre": "Crime", "director": "Martin Scorcese", "favourite": false},
+    {"id": 3, "imageUrl":"The_Irishman_poster.jpg", "title": "Irishmen", "genre": "Crime", "director": "Martin Scorcese", "favourite": false},
+    {"id": 4, "imageUrl":"raging_bull.jpg", "title": "Raging Bull", "genre": "Drama", "director": "Martin Scorcese", "favourite": false}
+  ]

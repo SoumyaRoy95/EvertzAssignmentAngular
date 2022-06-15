@@ -1,0 +1,19 @@
+<app-search></app-search>
+<app-filter></app-filter>
+<div class="container" fxLayout="row wrap">
+    <ul *ngFor="let movie of movies | async">
+        <li fxLayout="column">
+            <img [routerLink]="['movie', movie.id]" [src]="movie.imageUrl" [alt]="movie.title" width="150" height="150" />
+            <div class="content" fxLayout="column">
+                <div class="title" fxLayoutAlign="space-between">
+                    <span [routerLink]="['movie', movie.id]" class="name">{{movie.title}}</span>
+                    <span (click)="clickFavouritesIcon(movie)" class="favourite{{movie.favourite? '': 'not'}}">♥</span>
+                </div>
+                <div class="genre">
+                    <span>{{movie.genre}}</span>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+

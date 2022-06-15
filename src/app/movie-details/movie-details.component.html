@@ -1,0 +1,26 @@
+<div class="container" fxLayout fxLayout.xs="column" *ngIf="movie|async as movieDetails">
+    <!-- <p >{{movieDetails.title}}</p> -->
+    
+            <img [src]="movieDetails?.imageUrl" height="300" width="300" [alt]="movieDetails?.title" />
+            <div class="details">
+                <h1>{{movieDetails?.title}}</h1>
+                <h3>{{movieDetails?.director}}</h3>
+                <h4>{{movieDetails?.genre}}</h4>
+                <button color="accent" mat-raised-button (click)="editInformation()">Edit</button>
+                <div *ngIf="editor">
+                    <mat-form-field appearance="standard">
+                        <mat-label>Title</mat-label>
+                        <input matInput #title type="text" [value]="movieDetails?.title"/>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Director</mat-label>
+                        <input matInput #director type="text" [value]="movieDetails?.director"/>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Genre</mat-label>
+                        <input matInput #genre type="text" [value]="movieDetails?.genre" placeholder="Enter Genre"/>
+                    </mat-form-field>
+                    <button color="accent" mat-raised-button (click)="newDetails(movieDetails.id, title.value, director.value, genre.value)">Submit</button>
+                </div>
+            </div> 
+</div>    

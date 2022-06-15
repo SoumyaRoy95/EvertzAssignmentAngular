@@ -1,0 +1,7 @@
+<div>
+    <mat-form-field appearance="standard">
+        <mat-label>Search by Title</mat-label>
+        <input matInput #s type="text" (keyup.enter)="search(s.value)" [value]="searchTerm" />
+    </mat-form-field>
+    <button color="accent" mat-raised-button (click)="search(s.value)">Search</button>
+</div>
